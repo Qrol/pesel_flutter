@@ -38,6 +38,9 @@ class _MyHomePageState extends State<MyHomePage> {
   String isValid = "Not Valid";
   final myController = TextEditingController();
 
+  var myStyle = TextStyle(fontSize: 20, height: 2.0);
+
+
   @override void dispose() {
     myController.dispose();
     super.dispose();
@@ -115,16 +118,19 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Text(
                   'Birth date:',
+                  style: myStyle
                 ),
                 Text(
-                  '$birthDay'
+                  '$birthDay',
+                    style: myStyle
                 )
               ]
             ),
             Row(
                 children: [
                   Text(
-                      '$isValid'
+                      '$isValid',
+                      style: myStyle
                   )
                 ]
             ),
@@ -132,9 +138,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Text(
                     'Sex:',
+                      style: myStyle
                   ),
                   Text(
-                      '$sex'
+                      '$sex',
+                      style: myStyle
                   )
                 ]
             ),
